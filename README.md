@@ -23,7 +23,7 @@ OpenWrt 23.05.3 (r23809-234f1a2efa) on TOTOLINK X5000R.
     		option dest 'lan'
     		option proto 'udp'
     		option dest_port '500 4500'
-   		 option target 'ACCEPT'
+    		option target 'ACCEPT'
       
 `$ /etc/init.d/firewall restart`
 
