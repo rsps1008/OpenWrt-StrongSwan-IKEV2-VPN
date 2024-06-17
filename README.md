@@ -7,7 +7,9 @@ OpenWrt 23.05.3 (r23809-234f1a2efa) on TOTOLINK X5000R.
 # IKEv2/IPSec PSK
 ##### Dependencies
 `$ opkg install curl nano openssl-util`
+
 `$ opkg install strongswan-minimal strongswan-mod-kernel-libipsec kmod-tun`
+
 `$ opkg install strongswan-mod-sha2 strongswan-mod-openssl  strongswan-mod-curve25519 kmod-crypto-chacha20poly1305`
 ##### Configs
 `$ nano /etc/ipsec.conf`
