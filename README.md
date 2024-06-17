@@ -14,6 +14,19 @@ This guide provides a concise overview of configuring a VPN server using StrongS
 ## Test platform: 
 OpenWrt 23.05.3 (r23809-234f1a2efa) on TOTOLINK X5000R.
 
+# IKEv2 Firewall Policy
+`nano /etc/config/firewall`
+
+	config rule
+    		option name 'Allow-IPsec-IKE'
+    		option src 'wan'
+    		option dest 'lan'
+    		option proto 'udp'
+    		option dest_port '500 4500'
+   		 option target 'ACCEPT'
+      
+`$ /etc/init.d/firewall restart`
+
 
 # IKEv2/IPSec PSK
 ##### Dependencies
