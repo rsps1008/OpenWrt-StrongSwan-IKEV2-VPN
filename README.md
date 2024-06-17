@@ -2,11 +2,11 @@
 This guide provides a concise overview of configuring a VPN server using StrongSwan on OpenWRT. StrongSwan is an excellent choice for creating a VPN due to its support for various IPsec protocols and authentication methods. This setup is designed to accommodate a variety of devices, including iOS, Windows, and Android, using IKEv2 with MSCHAPv2 and PSK authentication options. Whether for personal use or managing remote access for a small office, this guide will help you deploy a VPN server that supports multiple platforms efficiently.
 
 ## How to use
-##### To Test:
+##### Test:
 `$ /etc/init.d/ipsec stop`
 
 `$ ipsec start --nofork`
-##### To run:
+##### Run:
 `$ /etc/init.d/ipsec start`
 
 `$ /etc/init.d/ipsec enable`
