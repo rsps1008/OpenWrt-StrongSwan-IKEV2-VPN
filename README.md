@@ -14,6 +14,7 @@ This guide provides a concise overview of configuring a VPN server using StrongS
 ## Test platform: 
 OpenWrt 23.05.3 (r23809-234f1a2efa) on TOTOLINK X5000R.
 
+
 # IKEv2/IPSec PSK
 ##### Dependencies
 `$ opkg install curl nano openssl-util`
@@ -58,6 +59,7 @@ OpenWrt 23.05.3 (r23809-234f1a2efa) on TOTOLINK X5000R.
 `$ nano /etc/ipsec.secrets`
 
 		: PSK "YourPassword"
+
 
 # IKEv2/IPSec MSCHAPv2
 ##### Dependencies
