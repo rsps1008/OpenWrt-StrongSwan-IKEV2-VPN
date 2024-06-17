@@ -70,7 +70,7 @@ OpenWrt 23.05.3 (r23809-234f1a2efa) on TOTOLINK X5000R.
 
 `$ /root/.acme.sh/acme.sh --issue --webroot /www -k 4096 -d YourDomainName --server letsencrypt`
 
-`$ /root/.acme.sh/acme.sh --install-cert -d YourDomainName --ca-file /etc/ipsec.d/cacerts/ca.cert.pem --key-file /etc/ipsec.d/private/server.pem   --fullchain-file /etc/ipsec.d/certs/server.fullchain.cert.pem   --cert-file /etc/ipsec.d/certs/server.cert.pem`
+`$ /root/.acme.sh/acme.sh --install-cert -d YourDomainName --ca-file /etc/ipsec.d/cacerts/ca.cert.pem --key-file /etc/ipsec.d/private/server.pem --fullchain-file /etc/ipsec.d/certs/server.fullchain.cert.pem --cert-file /etc/ipsec.d/certs/server.cert.pem`
 
 ##### Configs
 `$ nano /etc/ipsec.conf`
