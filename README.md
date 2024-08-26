@@ -111,13 +111,13 @@ OpenWrt 23.05.3 (r23809-234f1a2efa) on TOTOLINK X5000R.
 			dpddelay=300s
 			rekey=no
 			left=%any
-   			# leftid: Remote Identity
+			# leftid: Remote Identity
 			leftid=@YourDomainName
 			leftsubnet=0.0.0.0/0
 			leftcert=/etc/ipsec.d/certs/server.cert.pem
 			leftcert=/etc/ipsec.d/certs/server.fullchain.cert.pem
 			leftsendcert=always
-      			# rightid: Local Identity
+			# rightid: Local Identity
 			rightid=%any
 			rightauth=eap-mschapv2
 			rightdns=8.8.8.8, 8.8.4.4
