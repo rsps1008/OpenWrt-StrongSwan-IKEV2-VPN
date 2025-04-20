@@ -1,3 +1,5 @@
+# 🌐 OpenWrt StrongSwan IKEv2 VPN Server Setup Guide
+
 # Introduction
 This guide provides a concise overview of configuring a VPN server using StrongSwan on OpenWRT. StrongSwan is an excellent choice for setting up a VPN, as it supports a variety of IPsec protocols and authentication methods. This setup is designed to require minimal space, supporting multiple devices including iOS, Windows, and Android, utilizing IKEv2 along with MSCHAPv2 and PSK authentication options. Whether for personal use or managing remote access for a small office, this guide will help you efficiently deploy a multi-platform supportive VPN server.
 
