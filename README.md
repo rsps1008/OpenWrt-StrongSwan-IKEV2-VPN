@@ -48,7 +48,7 @@ OpenWrt 23.05.3 (r23809-234f1a2efa) on TOTOLINK X5000R.
 			# If you need more detailed debug information.
 			# charondebug="ike 1, knl 1, cfg 0"
 			# charondebug="ike 4, knl 4, cfg 4, net 4, esp 1, dmn 4,  mgr 4"
-			charondebug="ike 0, knl 0, cfg 0, net 0, asn 0, enc 0, lib 0, esp 0, tls 0, tnc 0, imc 0, imv 0, pts 0"
+			charondebug="ike 0, knl 0, cfg 0, net 0, esp 0"
 			uniqueids=no
 		
 		conn ikev2-psk
@@ -67,7 +67,7 @@ OpenWrt 23.05.3 (r23809-234f1a2efa) on TOTOLINK X5000R.
 			dpddelay=300s
 			rekey=no
 			left=%any
-			leftid=@YourDomainName
+			leftid=YourDomainName
 			leftsubnet=0.0.0.0/0
 			rightid=%any
 			rightdns=8.8.8.8, 8.8.4.4
@@ -95,7 +95,7 @@ OpenWrt 23.05.3 (r23809-234f1a2efa) on TOTOLINK X5000R.
 `$ nano /etc/ipsec.conf`
 
 		config setup
-			charondebug="ike 1, knl 1, cfg 0"
+			charondebug="ike 0, knl 0, cfg 0, net 0, esp 0"
 			uniqueids=no
 
 		conn ikev2-vpn
@@ -105,19 +105,18 @@ OpenWrt 23.05.3 (r23809-234f1a2efa) on TOTOLINK X5000R.
 			keyexchange=ikev2
 			fragmentation=yes
 			forceencaps=yes
-			ike=aes256-aes256-sha256-modp4096
-			esp=aes256-sha256
+			ike=aes256-sha256-ecp256
+			esp=aes256-sha256,null-sha1!
 			dpdaction=clear
 			dpddelay=300s
 			rekey=no
 			left=%any
-			# leftid: Remote Identity
-			leftid=@YourDomainName
+			# leftid: Remote Identity YourDomainName or your definition
+			leftid=YourDomainName
 			leftsubnet=0.0.0.0/0
-			leftcert=/etc/ipsec.d/certs/server.cert.pem
 			leftcert=/etc/ipsec.d/certs/server.fullchain.cert.pem
 			leftsendcert=always
-			# rightid: Local Identity
+			# rightid: Local Identity %any or your definition
 			rightid=%any
 			rightauth=eap-mschapv2
 			rightdns=8.8.8.8, 8.8.4.4
@@ -128,4 +127,4 @@ OpenWrt 23.05.3 (r23809-234f1a2efa) on TOTOLINK X5000R.
 
 		# : PSK "YourPassword"
 		: RSA server.pem
-		user01 : EAP "password" 
+		username : EAP "password" 
