@@ -107,8 +107,8 @@ OpenWrt 23.05.3 (r23809-234f1a2efa) on TOTOLINK X5000R.
 			keyexchange=ikev2
 			fragmentation=yes
 			forceencaps=yes
-			ike=aes256-sha256-ecp256
-			esp=aes256-sha256,null-sha1!
+			ike=aes256-sha1-modp1024,aes256-sha1-modp2048,aes256-sha256-modp2048,aes128-sha1-modp1024
+			esp=aes256-sha1,aes256-sha256,aes128-sha1
 			dpdaction=clear
 			dpddelay=300s
 			rekey=no
